@@ -1,0 +1,168 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- outlook_closed
+- outlook_xml_error
+- outlook_word
+- outlook_excel
+- outlook_issue
+- printer_queue
+- printer_spooler
+- printer_issue
+- outlook_powerpoint
+- Temp_file_C
+- system
+- low_memory
+- adobe_issue
+- system_slow
+- account_locked
+- critix_issue
+- browser_issue
+- internet_explorer
+- outlook_category
+- printer_category
+- system_category
+- system_slow_category
+- all_category
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_outlook_issue:
+  - text: what type of issue facing in outlook
+  utter_outlook_closed:
+  - text: Please click this link to solve outlook close [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi).
+  utter_outlook_xml_error:
+  - text: Please click this link to solve outlook xml [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi).
+  utter_outlook_word:
+  - text: Please click this link to solve outlook word [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi).
+  utter_outlook_excel:
+  - text: Please click this link to solve outlook excel [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi).
+  utter_outlook_powerpoint:
+  - text: Please click this link to solve outlook powerpoint [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi).
+  utter_printer_issue:
+  - text: what type of issue facing in printer
+  utter_printer_queue:
+  - text: To solve the printer [queue] (https://repo.anaconda.com/archive/Anaconda3-2020.02-Windows-x86_64.exe)
+  utter_printer_spooler:
+  - text: To solve the printer [spooler] (https://repo.anaconda.com/archive/Anaconda3-2020.02-Windows-x86_64.exe)
+  utter_default:
+  - text: Sorry I didn't understand..
+  utter_Temp_file_C:
+  - text: To delete the temp [file] (http://anakage.in/brillio/Heal-It%20installler%20common.msi).
+  utter_system:
+  - text: what type of issue facing in system
+  utter_low_memory:
+  - text: To solve the out of memory [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi)
+  utter_adobe_issue:
+  - text: To solve the adobe reader permission [denied] (http://anakage.in/brillio/Heal-It%20installler%20common.msi)
+  utter_system_slow:
+  - text: To solve the system slow [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi)
+  utter_account_locked:
+  - text: To solve the account locked [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi)
+  utter_critix_issue:
+  - text: To solve the critx open [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi)
+  utter_browser_issue:
+  - text: To solve the browser [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi)
+  utter_internet_explorer:
+  - text: To set the internet explorer as [default] (http://anakage.in/brillio/Heal-It%20installler%20common.msi)
+  utter_outlook_category:
+  - text: Please choose the below issue
+    buttons:
+    - title: Outlook closed when minimized
+      payload: /outlook_closed
+    - title: Cannot Start Microsoft Outlook getting Invalid XML error
+      payload: /outlook_xml_error
+    - title: cannot open the word attachment in Microsoft outlook
+      payload: /outlook_word
+    - title: Unable to Open Microsoft Excel attachment in outlook
+      payload: /outlook_excel
+    - title: cannot open the PowerPoint attachment in Microsoft outlook
+      payload: /outlook_powerpoint
+  utter_printer_category:
+  - text: Please choose the below issue
+    buttons:
+    - title: Print jobs stuck in print Queue
+      payload: /printer_queue
+    - title: Getting error Printer Spooler Service is not working
+      payload: /printer_spooler
+  utter_system_category:
+  - text: Please choose the below issue
+    buttons:
+    - title: Clean Temporary Files from C drive
+      payload: /Temp_file_C
+    - title: Running out of memory in computer
+      payload: /low_memory
+    - title: Access denied in Adobe Reader
+      payload: /adobe_issue
+  utter_system_slow_category:
+  - text: Please choose the below issue
+    buttons:
+    - title: Account gets locked frequently
+      payload: /account_locked
+    - title: Unable to Open Critix
+      payload: /critix_issue
+    - title: Unable to browser any website
+      payload: /browser_issue
+    - title: Set Internet Explorer as a Default Browse
+      payload: /internet_explorer
+  utter_all_category:
+  - text: Welcome to anakage self help chatbot. Please select the issue.
+    buttons:
+    - title: Outlook
+      payload: /outlook_category
+    - title: Printer
+      payload: /printer_category
+    - title: System memory
+      payload: /system_category
+    - title: System Slow
+      payload: /system_slow_category
+actions:
+- utter_outlook_closed
+- utter_outlook_xml_error
+- utter_outlook_word
+- utter_outlook_excel
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_printer_queue
+- utter_printer_spooler
+- utter_outlook_issue
+- utter_printer_issue
+- utter_default
+- utter_outlook_powerpoint
+- utter_Temp_file_C
+- utter_system
+- utter_low_memory
+- utter_adobe_issue
+- utter_system_slow
+- utter_account_locked
+- utter_critix_issue
+- utter_browser_issue
+- utter_internet_explorer
+- utter_outlook_category
+- utter_printer_category
+- utter_system_category
+- utter_system_slow_category
+- utter_all_category
